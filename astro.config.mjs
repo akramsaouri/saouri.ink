@@ -10,7 +10,9 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://example.com',
   integrations: [mdx(), sitemap()],
-
+  redirects: {
+    '/blog': '/',
+  },
   vite: {
     plugins: [tailwindcss()],
   },
