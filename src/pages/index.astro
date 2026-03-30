@@ -40,15 +40,9 @@ const posts = (await getCollection('blog')).sort(
 </html>
 
 <style>
-	.page {
-		min-height: 100vh;
-		display: flex;
-		flex-direction: column;
-	}
-
 	main {
 		flex: 1;
-		max-width: var(--page-width);
+		max-width: var(--content-width);
 		margin: 0 auto;
 		padding: 6rem 1.5rem 4rem;
 	}
