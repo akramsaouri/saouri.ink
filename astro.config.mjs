@@ -2,6 +2,7 @@
 
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import vercel from '@astrojs/vercel';
 import { defineConfig } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
@@ -10,6 +11,11 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://saouri.ink',
   integrations: [mdx(), sitemap()],
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
   redirects: {
     '/blog': '/',
   },
