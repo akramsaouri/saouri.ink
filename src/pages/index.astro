@@ -15,7 +15,7 @@ const posts = (await getCollection('blog')).sort(
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body>
+	<body class="page">
 		<Header />
 		<main>
 			{posts.map((post, i) => (
@@ -40,7 +40,14 @@ const posts = (await getCollection('blog')).sort(
 </html>
 
 <style>
+	.page {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+
 	main {
+		flex: 1;
 		max-width: var(--page-width);
 		margin: 0 auto;
 		padding: 6rem 1.5rem 4rem;

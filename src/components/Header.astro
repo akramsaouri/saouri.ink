@@ -3,7 +3,13 @@ import { SITE_TITLE } from '../consts';
 ---
 
 <header>
-	<a href="/" class="site-name">{SITE_TITLE}</a>
+	<a href="/" class="site-name">
+		<svg class="ink-drop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+			<path d="M64 12 C64 12, 28 64, 28 82 C28 101.88, 44.12 118, 64 118 C83.88 118, 100 101.88, 100 82 C100 64, 64 12, 64 12Z" fill="currentColor"/>
+			<circle cx="52" cy="80" r="6" fill="#F7F6F3" opacity="0.6"/>
+		</svg>
+		{SITE_TITLE}
+	</a>
 	<nav>
 		<a href="/about">About</a>
 	</nav>
@@ -14,6 +20,7 @@ import { SITE_TITLE } from '../consts';
 		display: flex;
 		align-items: baseline;
 		justify-content: space-between;
+		width: 100%;
 		max-width: var(--page-width);
 		margin: 0 auto;
 		padding: 2.5rem 1.5rem 0;
@@ -26,6 +33,14 @@ import { SITE_TITLE } from '../consts';
 		color: var(--text);
 		text-decoration: none;
 		letter-spacing: -0.01em;
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+	}
+
+	.ink-drop {
+		width: 0.9rem;
+		height: 0.9rem;
 	}
 
 	.site-name:hover {
