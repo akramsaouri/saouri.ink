@@ -14,7 +14,7 @@ const { title, description, pubDate, updatedDate, epistemicStatus } = Astro.prop
 	<head>
 		<BaseHead title={title} description={description} />
 	</head>
-	<body>
+	<body class="page">
 		<Header />
 		<main class="animate-in">
 			<article>
@@ -42,7 +42,14 @@ const { title, description, pubDate, updatedDate, epistemicStatus } = Astro.prop
 </html>
 
 <style>
+	.page {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+
 	main {
+		flex: 1;
 		max-width: var(--page-width);
 		margin: 0 auto;
 		padding: 4rem 1.5rem;
