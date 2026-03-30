@@ -94,6 +94,15 @@ const { title, description, pubDate, updatedDate, epistemicStatus } = Astro.prop
 		max-width: var(--content-width);
 	}
 
+	.prose :global(p:first-of-type::first-letter) {
+		float: left;
+		font-size: 3.8em;
+		line-height: 0.75;
+		padding: 0.06em 0.12em 0 0;
+		font-weight: 500;
+		color: var(--text);
+	}
+
 	.prose :global(h2) {
 		margin-top: 3rem;
 		margin-bottom: 1rem;
